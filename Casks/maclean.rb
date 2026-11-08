@@ -1,6 +1,6 @@
 cask "maclean" do
-  version "0.4.0"
-  sha256 "994fe9a0e3dbfadf7ff1aaec68f462351cd5f94af11bfbbc032c5302d1093c67"
+  version "0.5.0"
+  sha256 "5306a47dd2bf0c308a9b1333bdb9cb1b89fbea894898c3bdadda3374abfb0945"
 
   url "https://github.com/smalhasib/maclean/releases/download/v#{version}/Maclean-#{version}.zip"
   name "Maclean"
