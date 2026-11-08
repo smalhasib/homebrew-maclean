@@ -7,7 +7,7 @@ cask "maclean" do
   desc "Disk space analyzer with a sunburst map, collector and Smart Clean"
   homepage "https://github.com/smalhasib/maclean"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Maclean.app"
   binary "#{appdir}/Maclean.app/Contents/MacOS/maclean-scan"
@@ -15,9 +15,11 @@ cask "maclean" do
   # Maclean is signed ad hoc, not with an Apple Developer ID, so Gatekeeper
   # would refuse to open the downloaded copy. Clear the quarantine flag on
   # the installed app only.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Maclean.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "Maclean.app"],
+        chdir:          "{{appdir}}",
+        writable_paths: ["{{appdir}}/Maclean.app"]
   end
 
   zap trash: [
