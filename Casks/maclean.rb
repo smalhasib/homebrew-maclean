@@ -2,10 +2,10 @@ cask "maclean" do
   version "0.7.0"
   sha256 "44b6cd8272e0427d445132dc09715e2b6561b11818ca71fd9262381f50c9ea46"
 
-  url "https://github.com/smalhasib/maclean/releases/download/v#{version}/Maclean-#{version}.zip"
+  url "https://github.com/smalhasib/maclean-site/releases/download/v#{version}/Maclean-#{version}.zip"
   name "Maclean"
   desc "Disk space analyzer with a sunburst map, collector and Smart Clean"
-  homepage "https://github.com/smalhasib/maclean"
+  homepage "https://smalhasib.github.io/maclean-site/"
 
   depends_on macos: :sonoma
 

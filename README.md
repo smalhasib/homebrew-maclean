@@ -1,6 +1,6 @@
 # Homebrew tap for Maclean
 
-[Maclean](https://github.com/smalhasib/maclean) is an open-source disk space analyzer and cleaner for macOS.
+[Maclean](https://smalhasib.github.io/maclean-site/) is a disk space analyzer and cleaner for macOS.
 
 ```sh
 brew tap smalhasib/maclean
